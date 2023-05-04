@@ -1,15 +1,19 @@
 #include <iostream>
-#include "invert.h"
+#include "funcs.h"
 #include "imageio.h"
 #include <cmath>
 
+/*
+Task A:
+Inverts all colors, so white shades become black, and black become white
+*/
 void invert_colors() {
 
     std::string input = "image1.pgm";
     int img[MAX_H][MAX_W];
     int h, w;
     readImage(input, img, h, w); 
-
+  
     int out[MAX_H][MAX_W];
     int row, col;
     for(row = 0; row < h; row++) {
@@ -30,6 +34,10 @@ void invert_colors() {
     writeImage("taskA.pgm",out, h, w);
 }
 
+/*
+Task B:
+Inverts the colors only in the right half of the picture
+*/
 void invert_half() {
     std::string input = "image1.pgm";
     int img[MAX_H][MAX_W];
@@ -56,7 +64,10 @@ void invert_half() {
     writeImage("taskB.pgm",out, h, w);
 }
 
-
+/*
+Task C:
+Draws a white box exactly in the middle of the picture; the dimensions should be 50% by 50% of the original picture’s width and height
+*/
 void white_box() {
 
  std::string input = "image1.pgm";
@@ -85,7 +96,10 @@ void white_box() {
     writeImage("taskC.pgm",out, h, w);
 }
 
-
+/*
+Task D:
+Creates a frame exactly one pixel thick, using the box from Task C
+*/
 void frame() {
 
  std::string input = "image1.pgm";
@@ -119,7 +133,10 @@ void frame() {
 }
 
 
-
+/*
+Task E:
+Scales the original picture to 200% of its size
+*/
 void scale() {
     std::string input = "image1.pgm";
     int img[MAX_H][MAX_W];
@@ -144,7 +161,10 @@ void scale() {
    writeImage("taskE.pgm", out, h, w);
 }
 
-
+/*
+Task F:
+Pixelates the input image
+*/
 void pixelate() {
 std::string input = "image1.pgm";
     int img[MAX_H][MAX_W];
@@ -184,6 +204,4 @@ std::string input = "image1.pgm";
    writeImage("taskF.pgm", out, h, w);
 
 }
-
-
 

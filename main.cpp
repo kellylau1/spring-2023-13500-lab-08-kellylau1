@@ -1,5 +1,5 @@
 #include <iostream>
-#include "invert.h"
+#include "funcs.h"
 
 int main() {
 
